@@ -29,7 +29,7 @@ The `List` class is declared within namespace `ECE275Lib::containers`
 - The `List` class remove multiple nodes in the list through a member function `List<T>::remove(unsigned int s, unsigned int e`) where `s` denotes the starting index of the `Node` to remove and `e` denotes the ending index of the `Node` to remove. 
   The list's size must be updated accordingly. 
 - The `List` insert an element at index `i` through a member function `List<T>::insert(unsigned int i, T d)` where `i` is the index of the new element to be inserted, e.g., the list before insertion may look like `[HEAD] (index 0) A --> (index 1) B --> (index 2) C --> nullptr` and the list after `List<T>::insert(1, N)` where `N` represents the data stored in the new `Node` will look like `[HEAD] (index 0) A --> (index 1) N --> (index 2) B --> (index 3) C --> nullptr`
-- The `List` insert a separate `List` starting at index `i` through a member function `List<T>::insert(unsigned int i, List<T>& other)` (note the necessity to pass by reference!! Alternatively, students may chose to define a copy constructor for their `List` class). 
+- The `List` insert a separate `List` starting at index `i` through a member function `List<T>::insert(unsigned int i, List<T>& other)` (note the necessity to pass by reference!!). 
   E.g., the list before insertion of another list may look like `[HEAD] (index 0) A --> (index 1) B --> (index 2) C --> nullptr` and the list after `List<T>::insert(1, other)` where `other` may look like `[HEAD] (index 0) Z --> (index 1) Y --> nullptr` will look like `[HEAD] (index 0) A --> (index 1) Z --> (index 2) Y --> (index 3) B --> (index 4) C --> nullptr` 
 
 ```c
